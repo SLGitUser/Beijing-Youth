@@ -1,0 +1,42 @@
+﻿@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    //Layout = null;
+    ViewBag.Title = "登录";
+}
+<div class="login-box">
+    <div class="login-logo">
+        <i class="fa fa-fw fa-graduation-cap" style="color: #4b0082;font-size:45px"></i>
+        <a href="#" class="login-head">北青资源站</a>
+    </div>
+    <div class="login-box-body">
+        <p class="login-box-msg">请填写您的登录信息</p>
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <div class="form-group has-feedback">
+            <input type="text" class="form-control" placeholder="账号">
+        </div>
+        <div class="form-group has-feedback">
+            <input type="password" class="form-control" placeholder="密码">
+        </div>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="checkbox icheck">
+                    <label>
+                        <input type="checkbox"> 记住密码
+                    </label>
+                </div>
+            </div><!-- /.col -->
+            <div class="col-xs-4">
+                <button type="submit" class="btn btn-primary btn-block btn-flat">登录</button>
+            </div><!-- /.col -->
+        </div>
+    }
+        <div class="social-auth-links text-center">
+            <p>- OR -</p>
+            @*<a href="#" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-facebook"></i> Sign in using Facebook</a>
+                <a href="#" class="btn btn-block btn-social btn-google btn-flat"><i class="fa fa-google-plus"></i> Sign in using Google+</a>*@
+        </div><!-- /.social-auth-links -->
+        <a href="#">忘记密码？</a><br>
+        <a href="#" class="text-center">注册</a>
+    </div><!-- /.login-box-body -->
+</div>

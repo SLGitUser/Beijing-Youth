@@ -1,0 +1,17 @@
+﻿
+@model IEnumerable<BeijingYouth.Pub.Models.JSJL.Message>
+@foreach (var item in Model)
+{
+    bool isCur = item.Send.Equals("张三");
+    <div class="direct-chat-msg @(isCur ? @"right" : "")">
+        <div class="direct-chat-info clearfix">
+            <span class="direct-chat-name @(isCur ? @"pull-right" : "pull-left")">@item.Send</span>
+            <span class="direct-chat-timestamp @(isCur ? @"pull-left" : "pull-right")">@item.SendDate.ToString("yyyy-MM-dd HH:mm:ss")</span>
+        </div><!-- /.direct-chat-info -->
+        <img class="direct-chat-img" src="/Content/dist/img/avatar.png" alt="message user image"><!-- /.direct-chat-img -->
+        <div class="direct-chat-text">
+            @item.Content
+        </div><!-- /.direct-chat-text -->
+    </div>
+    <!-- /.direct-chat-msg -->
+}

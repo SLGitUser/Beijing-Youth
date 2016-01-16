@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/Css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Content/Css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/Content/Css/AdminLTE.min.css">
+    <!-- iCheck -->
+    <link rel="stylesheet" href="/Content/plugins/iCheck/flat/blue.css">
+    @*@Html.Partial("~/Views/Shared/CssAndJs.cshtml")*@
+    @RenderSection("scripts", required: false)
+    <style type="text/css">
+        * {
+             font-family: 微软雅黑;
+        }
+    </style>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <title>登录-北青资源站</title>
+</head>
+<body class="hold-transition login-page login-back">
+    @RenderBody()
+</body>
+</html>
